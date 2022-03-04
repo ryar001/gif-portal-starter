@@ -14,3 +14,6 @@ If you use VSCode to build your app, we included a list of suggested extensions 
 
 ### **Questions?**
 Have some questions make sure you head over to your [buildspace Dashboard](https://app.buildspace.so/courses/CObd6d35ce-3394-4bd8-977e-cbee82ae07a3) and link your Discord account so you can get access to helpful channels and your instructor!
+
+###  anchor extra resource
+https://lorisleiva.com/create-a-solana-dapp-from-scratch/getting-started-with-solana-and-anchor#install-rust
