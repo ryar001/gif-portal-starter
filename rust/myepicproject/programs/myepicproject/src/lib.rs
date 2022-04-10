@@ -12,34 +12,33 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  // input ctx of type Context<StartStuffOff>  and output ProgramResult
-  // ctx is main way for endpoints to connect to the accounts Struct
   pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
-    // Get a reference to the account.
     let base_account = &mut ctx.accounts.base_account;
-    // Initialize total_gifs.
     base_account.total_gifs = 0;
-    base_account.dice_result=0
     Ok(())
   }
 
-  // The function now accepts a gif_link param from the user. We also reference the user from the Context
-  pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> ProgramResult {
+  // input ctx of type Context<StartStuffOff>  and output ProgramResult
+  // ctx is main way for endpoints to connect to the accounts Struct
+  pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> ProgramResult{
     let base_account = &mut ctx.accounts.base_account;
     let user = &mut ctx.accounts.user;
 
-	// Build the struct.
+    // Build the ItemStruct
     let item = ItemStruct {
-      gif_link: gif_link.to_string(),
+      gif_link: gif_link.to_string(), // set the link to string type
       user_address: *user.to_account_info().key,
     };
-		
-	// Add it to the gif_list vector.
+
+    // add item to the gif_list vector
     base_account.gif_list.push(item);
-    base_account.total_gifs += 1;
+    base_account.total_gifs+=1;
     Ok(())
   }
 }
+
+
+
 
 /*First we've got [account(init, payer = user, space = 9000)]. 
 All we're doing here is telling Solana how we want to initialize BaseAccount.
