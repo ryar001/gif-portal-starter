@@ -2,7 +2,7 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("8otpHxrRhyCsYXx5JZyHscYD3eZu1ujzjFDXPctqYFHd");
 
 // basic anchor definition
 // #[program] is where the function for the logic of the program is written

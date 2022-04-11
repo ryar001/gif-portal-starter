@@ -1,7 +1,7 @@
 [features]
 seeds = false
-[programs.localnet]
-myepicproject = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+[programs.devnet]
+myepicproject = "8otpHxrRhyCsYXx5JZyHscYD3eZu1ujzjFDXPctqYFHd"
 
 [registry]
 url = "https://anchor.projectserum.com"
